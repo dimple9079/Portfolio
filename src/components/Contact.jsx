@@ -4,7 +4,7 @@ const contacts = [
   { icon: Mail, label: 'Email', value: 'sirvidimple483@gmail.com', href: 'sirvidimple483@gmail.com', color: '#00F5FF' },
   { icon: Phone, label: 'Phone', value: '+91 8767197982', href: 'tel:+918767197982', color: '#00FF85' },
   { icon: Link, label: 'LinkedIn', value: 'https://www.linkedin.com/in/dimple-s-10a660379/linkedin', href: 'https://www.linkedin.com/in/dimple-s-10a660379/ ', external: true, color: '#0A66C2' },
-  { icon: Code2, label: 'GitHub', value: 'github.com/dimple9079', href: 'https://github.com/dimple9079', external: true, color: '#C0C0E0' },
+  { icon: Code2, label: 'GitHub', value: 'https://github.com/dimple9079', href: 'https://github.com/dimple9079', external: true, color: '#C0C0E0' },
 ];
 
 export default function Contact() {
