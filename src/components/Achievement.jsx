@@ -60,7 +60,7 @@ export default function Achievement() {
                 boxShadow: 'inset 0 4px 14px rgba(0,0,0,0.4)',
               }}>
                 <img
-                  src="certificate.png"
+                  src={`${import.meta.env.BASE_URL}certificate.png`}
                   alt="Best Business Idea Presentation Certificate"
                   style={{ width: '100%', display: 'block', objectFit: 'cover', maxHeight: 300 }}
                 />
