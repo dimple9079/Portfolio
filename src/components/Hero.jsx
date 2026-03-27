@@ -102,7 +102,7 @@ export default function Hero() {
                 boxShadow: '3px 3px 8px var(--shadow-d), -3px -3px 8px var(--shadow-l), 0 0 16px var(--cyan-glow)',
                 border: '2px solid var(--cyan)',
               }}>
-                <img src="/profile.png" alt="Developer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="profile.png" alt="Developer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <div style={{ fontWeight: 800, fontSize: 14, color: 'var(--text)' }}>Shelvi Dingle</div>
@@ -151,7 +151,7 @@ export default function Hero() {
               </div>
 
               <img
-                src="/dashboard.png"
+                src="dashboard.png"
                 alt="LinkForge QR Generator Dashboard"
                 style={{ width: '100%', display: 'block', maxHeight: 400, objectFit: 'cover' }}
               />
