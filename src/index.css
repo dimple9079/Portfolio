@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg:         #141428;
+  --surface:    #181830;
+  --surface2:   #1c1c38;
+  --shadow-l:   #1f1f42;
+  --shadow-d:   #090916;
+  --border:     rgba(255,255,255,0.05);
+  --cyan:       #00F5FF;
+  --cyan-dim:   rgba(0,245,255,0.08);
+  --cyan-glow:  rgba(0,245,255,0.25);
+  --violet:     #7B61FF;
+  --text:       #e2e2f0;
+  --muted:      #7272a0;
+  --muted2:     #3a3a58;
+
+  --neu-flat:       6px 6px 14px var(--shadow-d), -6px -6px 14px var(--shadow-l);
+  --neu-pressed:    inset 4px 4px 10px var(--shadow-d), inset -4px -4px 10px var(--shadow-l);
+  --neu-raised:     8px 8px 20px var(--shadow-d), -8px -8px 20px var(--shadow-l);
+  --neu-raised-lg:  12px 12px 28px var(--shadow-d), -12px -12px 28px var(--shadow-l);
+  --neu-inset:      inset 6px 6px 16px var(--shadow-d), inset -6px -6px 16px var(--shadow-l);
+  --neu-cyan:       6px 6px 16px var(--shadow-d), -6px -6px 16px var(--shadow-l), 0 0 20px var(--cyan-dim);
+}
+
+body.light {
+  --bg:         #e8e8f0;
+  --surface:    #eeeef6;
+  --surface2:   #f4f4fa;
+  --shadow-l:   #ffffff;
+  --shadow-d:   #c8c8d8;
+  --border:     rgba(0,0,0,0.05);
+  --cyan:       #007AFF;
+  --cyan-dim:   rgba(0,122,255,0.08);
+  --cyan-glow:  rgba(0,122,255,0.20);
+  --violet:     #6048e8;
+  --text:       #1a1a2e;
+  --muted:      #6666a0;
+  --muted2:     #b0b0cc;
+
+  --neu-flat:       5px 5px 12px var(--shadow-d), -5px -5px 12px var(--shadow-l);
+  --neu-pressed:    inset 4px 4px 10px var(--shadow-d), inset -4px -4px 10px var(--shadow-l);
+  --neu-raised:     7px 7px 18px var(--shadow-d), -7px -7px 18px var(--shadow-l);
+  --neu-raised-lg:  10px 10px 24px var(--shadow-d), -10px -10px 24px var(--shadow-l);
+  --neu-inset:      inset 5px 5px 14px var(--shadow-d), inset -5px -5px 14px var(--shadow-l);
+  --neu-cyan:       5px 5px 14px var(--shadow-d), -5px -5px 14px var(--shadow-l), 0 0 16px var(--cyan-dim);
+}
+
+html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 99px; }
+
+.neu-card { background: var(--bg); border-radius: 20px; box-shadow: var(--neu-raised); border: 1px solid var(--border); transition: all 0.3s ease; }
+.neu-card:hover { box-shadow: var(--neu-raised-lg); transform: translateY(-2px); }
+.neu-card-lg { background: var(--bg); border-radius: 24px; box-shadow: var(--neu-raised-lg); border: 1px solid var(--border); }
+.neu-inset { background: var(--bg); border-radius: 16px; box-shadow: var(--neu-inset); border: 1px solid rgba(0,0,0,0.1); }
+.neu-flat { background: var(--bg); border-radius: 14px; box-shadow: var(--neu-flat); }
+.neu-accent { background: var(--bg); border-radius: 20px; box-shadow: var(--neu-cyan); border: 1px solid rgba(0,245,255,0.1); }
+.neu-icon { background: var(--bg); box-shadow: var(--neu-raised); display: flex; align-items: center; justify-content: center; border-radius: 14px; transition: box-shadow 0.25s; }
+.neu-surface { background: var(--surface); box-shadow: inset 0 4px 20px var(--shadow-d), inset 0 -4px 20px var(--shadow-l); }
+
+.btn-primary { background: linear-gradient(135deg, var(--cyan) 0%, #00C8D4 100%); color: #000; font-weight: 800; border-radius: 14px; padding: 12px 26px; transition: all 0.25s; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; box-shadow: 4px 4px 12px var(--shadow-d), -2px -2px 8px var(--shadow-l), 0 0 20px var(--cyan-dim); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 6px 6px 18px var(--shadow-d), -3px -3px 10px var(--shadow-l), 0 0 32px var(--cyan-glow); }
+.btn-primary:active { transform: translateY(0); box-shadow: var(--neu-pressed); }
+.btn-outline { background: var(--bg); color: var(--text); font-weight: 600; border-radius: 14px; padding: 12px 24px; transition: all 0.25s; border: 1px solid var(--border); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; box-shadow: var(--neu-flat); }
+.btn-outline:hover { color: var(--cyan); box-shadow: var(--neu-cyan); border-color: rgba(0,245,255,0.15); transform: translateY(-2px); }
+.btn-outline:active { box-shadow: var(--neu-pressed); transform: translateY(0); }
+
+.glass { background: var(--bg); border-radius: 20px; box-shadow: var(--neu-raised); border: 1px solid var(--border); transition: all 0.3s; }
+.glass:hover { box-shadow: var(--neu-raised-lg); }
+
+.gradient-text { background: linear-gradient(135deg, var(--cyan) 0%, var(--violet) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.section { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; }
+.divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--violet)); margin-bottom: 16px; border-radius: 99px; box-shadow: 0 0 10px var(--cyan-glow); }
+.badge { display: inline-flex; align-items: center; gap: 6px; background: var(--bg); color: var(--cyan); border: 1px solid rgba(0,245,255,0.1); border-radius: 99px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: var(--neu-flat); }
+.tag { display: inline-flex; align-items: center; gap: 4px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; box-shadow: var(--neu-flat); }
+.step-line { width: 2px; background: linear-gradient(to bottom, var(--cyan), transparent); min-height: 40px; margin: 0 auto; }
+.carousel-dot { width: 7px; height: 7px; border-radius: 99px; background: var(--muted2); transition: all 0.3s; cursor: pointer; box-shadow: var(--neu-flat); }
+.carousel-dot.active { background: var(--cyan); width: 22px; box-shadow: 0 0 12px var(--cyan-glow); }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 var(--cyan-glow); } 50% { box-shadow: 0 0 20px 4px var(--cyan-glow); } }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+.animate-fade-up { animation: fadeInUp 0.6s ease forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
